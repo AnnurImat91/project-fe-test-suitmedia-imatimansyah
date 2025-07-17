@@ -3,16 +3,15 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import axios from 'axios';
 import { NavLink } from 'react-router-dom';
-import './App.css';
-import Logo from "./assets/site-logo-nobg.png";
-import Banner from "./assets/gray-background.jpg";
+import Logo from "../assets/site-logo-nobg.png";
+import Banner from "../assets/gray-background.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 const API_URL = 'https://suitmedia-backend.suitdev.com/api/ideas';
 
-function App() {
+function Work() {
   const bannerRef = useRef(null);
   const [posts, setPosts] = useState([]);
   const [page, setPage] = useState(1);
@@ -129,12 +128,12 @@ function App() {
         <nav className="flex justify-around items-center p-4">
           <NavLink to="/"><img src={Logo} alt="logo" /></NavLink>
           <div className="space-x-6 text-white overflow-hidden max-sm:hidden max-md:hidden">
-            <NavLink to="/work" className="hover:border-b-4 border-b-white">Work</NavLink>
-            <NavLink to="/about" className="hover:border-b-4 border-b-white">Aboout</NavLink>
-            <NavLink to="/services" className="hover:border-b-4 border-b-white">Services</NavLink>
-            <NavLink to="/ideas" className="hover:border-b-4 border-b-white">Ideas</NavLink>
-            <NavLink to="/careers" className="hover:border-b-4 border-b-white">Careers</NavLink>
-            <NavLink to="/contact" className="hover:border-b-4 border-b-white">Contact</NavLink>
+            <NavLink to="/work" className="nav-link hover:border-b-4 border-b-white">Work</NavLink>
+            <NavLink to="/about" className="nav-link der-b-4 border-b-white">Aboout</NavLink>
+            <NavLink to="/services" className="nav-link der-b-4 border-b-white">Services</NavLink>
+            <NavLink to="/ideas" className="nav-link der-b-4 border-b-white">Ideas</NavLink>
+            <NavLink to="/careers" className="nav-link der-b-4 border-b-white">Careers</NavLink>
+            <NavLink to="/contact" className="nav-link der-b-4 border-b-white">Contact</NavLink>
           </div>
         </nav>
       </header>
@@ -209,4 +208,4 @@ function App() {
   );
 }
 
-export default App;
+export default Work;

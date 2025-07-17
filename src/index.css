@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
-body {
-  @apply bg-white text-black;
+.nav-link {
+  color: white;
 }
 
+.nav-link.active {
+  color: #ffff; 
+  border-bottom: 2px solid #ffff;
+  font-weight: 600;
+}
