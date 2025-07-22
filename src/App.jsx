@@ -186,7 +186,7 @@ function App() {
               className="rounded-xl shadow-md p-3 block hover:shadow-lg transition"
             >
               <img
-                src={post.small_image}
+                src={post.small_image?.[0]?.url}
                 loading="lazy"
                 alt={post.title}
                 className="w-full h-40 object-cover rounded"
